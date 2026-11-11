@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?><nmaprun args="nmap -p 1-65535 -T4 -A -v 10.0.0.3" profile_name="Intense scan, all TCP ports" scanner="nmap" start="1794305701" startstr="Tue Nov 10 05:15:01 2026" version="7.991" xmloutputversion="1.04"><scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"></scaninfo><verbose level="1"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.991 ( https://nmap.org ) at 2026-11-10 05:15 -0500
+NSE: Loaded 158 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 05:15
+Completed NSE at 05:15, 0.00s elapsed
+Initiating NSE at 05:15
+Completed NSE at 05:15, 0.00s elapsed
+Initiating NSE at 05:15
+Completed NSE at 05:15, 0.00s elapsed
+Initiating ARP Ping Scan at 05:15
+Scanning 10.0.0.3 [1 port]
+Completed ARP Ping Scan at 05:15, 0.09s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 05:15
+Completed Parallel DNS resolution of 1 host. at 05:15, 0.50s elapsed
+Initiating SYN Stealth Scan at 05:15
+Scanning 10.0.0.3 [65535 ports]
+Discovered open port 53/tcp on 10.0.0.3
+Completed SYN Stealth Scan at 05:15, 33.45s elapsed (65535 total ports)
+Initiating Service scan at 05:15
+Scanning 1 service on 10.0.0.3
+Completed Service scan at 05:15, 6.44s elapsed (1 service on 1 host)
+Initiating OS detection (try #1) against 10.0.0.3
+Retrying OS detection (try #2) against 10.0.0.3
+NSE: Script scanning 10.0.0.3.
+Initiating NSE at 05:15
+Completed NSE at 05:15, 8.67s elapsed
+Initiating NSE at 05:15
+Completed NSE at 05:15, 0.01s elapsed
+Initiating NSE at 05:15
+Completed NSE at 05:15, 0.00s elapsed
+Nmap scan report for 10.0.0.3
+Host is up (0.0026s latency).
+Not shown: 65534 filtered tcp ports (net-unreach)
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  dnsmasq UNKNOWN
+| dns-nsid: 
+|_  bind.version: dnsmasq-UNKNOWN
+MAC Address: 52:54:00:12:35:00 (QEMU virtual NIC)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: VoIP adapter|bridge|general purpose
+Running (JUST GUESSING): AT&amp;T embedded (89%), Oracle Virtualbox (88%), Slirp (88%), QEMU (86%)
+OS CPE: cpe:/o:oracle:virtualbox cpe:/a:danny_gasparovski:slirp cpe:/a:qemu:qemu
+Aggressive OS guesses: AT&amp;T BGW210 voice gateway (89%), Oracle Virtualbox Slirp NAT bridge (88%), QEMU user mode network gateway (86%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=18 (Good luck!)
+IP ID Sequence Generation: Randomized
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   2.58 ms 10.0.0.3
+
+NSE: Script Post-scanning.
+Initiating NSE at 05:15
+Completed NSE at 05:15, 0.00s elapsed
+Initiating NSE at 05:15
+Completed NSE at 05:15, 0.00s elapsed
+Initiating NSE at 05:15
+Completed NSE at 05:15, 0.00s elapsed
+Read data files from: /usr/share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 54.63 seconds
+           Raw packets sent: 65586 (2.890MB) | Rcvd: 65586 (4.725MB)
+</output><host comment=""><status state="up"></status><address addr="10.0.0.3" vendor="" addrtype="ipv4"></address><address addr="52:54:00:12:35:00" vendor="QEMU virtual NIC" addrtype="mac"></address><hostnames></hostnames><ports><extraports count="65534" state="filtered"></extraports><port portid="53" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="64"></state><service conf="10" method="probed" name="domain" product="dnsmasq" version="UNKNOWN"></service></port></ports><os><portused state="open" proto="tcp" portid="53"></portused><osmatch name="AT&amp;T BGW210 voice gateway" accuracy="89" line="10195"><osclass vendor="AT&amp;T" osfamily="embedded" type="VoIP adapter" osgen="" accuracy="89"></osclass></osmatch><osmatch name="Oracle Virtualbox Slirp NAT bridge" accuracy="88" line="99982"><osclass vendor="Slirp" osfamily="Slirp" type="bridge" osgen="" accuracy="88"></osclass></osmatch><osmatch name="QEMU user mode network gateway" accuracy="86" line="101823"><osclass vendor="QEMU" osfamily="QEMU" type="general purpose" osgen="" accuracy="86"></osclass></osmatch></os><uptime seconds="" lastboot=""></uptime><tcpsequence index="18" difficulty="Good luck!" values="23DF9801,23E18C01,23E28601,23E38001,23E47A01,23E57401"></tcpsequence><ipidsequence class="Randomized" values="529C,B3F3,303B,93AF,3D3,17D4"></ipidsequence><tcptssequence class="none returned (unsupported)" values=""></tcptssequence><trace proto="" port=""><hop ttl="1" rtt="2.58" ipaddr="10.0.0.3" host=""></hop></trace></host><runstats><finished time="1794305756" timestr="Tue Nov 10 05:15:56 2026"></finished><hosts up="1" down="0" total="1"></hosts></runstats></nmaprun>
